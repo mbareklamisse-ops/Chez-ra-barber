@@ -1,2 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chez RA Barber</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:#000;
+color:white;
+font-family:Arial, sans-serif;
+}
+
+header{
+text-align:center;
+padding:40px 20px;
+}
+
+h1{
+color:#d4af37;
+font-size:3rem;
+}
+
+.slogan{
+margin-top:10px;
+color:#ccc;
+}
+
+section{
+padding:40px 20px;
+max-width:900px;
+margin:auto;
+}
+
+.section-title{
+text-align:center;
+color:#d4af37;
+margin-bottom:25px;
+font-size:2rem;
+}
+
+.tarifs{
+display:grid;
+gap:15px;
+}
+
+.tarif{
+background:#111;
+border:1px solid #d4af37;
+padding:15px;
+border-radius:10px;
+display:flex;
+justify-content:space-between;
+}
+
+.tarif span:last-child{
+color:#d4af37;
+font-weight:bold;
+}
+
+.contact{
+text-align:center;
+}
+
+.btn{
+display:inline-block;
+margin-top:15px;
+background:#d4af37;
+color:black;
+text-decoration:none;
+padding:12px 25px;
+border-radius:8px;
+font-weight:bold;
+}
+
+footer{
+text-align:center;
+padding:20px;
+color:#888;
+}
+</style>
+</head>
+
+<body>
+
+<header>
 <h1>Chez RA Barber</h1>
-<p>Mon site est en cours de création.</p>
+<p class="slogan">Coupes modernes • Dégradés • Barbe</p>
+</header>
+
+<section>
+<h2 class="section-title">Tarifs</h2>
+
+<div class="tarifs">
+<div class="tarif">
+<span>Coupe Homme</span>
+<span>15€</span>
+</div>
+
+<div class="tarif">
+<span>Coupe + Barbe</span>
+<span>20€</span>
+</div>
+
+<div class="tarif">
+<span>Barbe</span>
+<span>10€</span>
+</div>
+
+<div class="tarif">
+<span>Coupe Enfant</span>
+<span>12€</span>
+</div>
+</div>
+</section>
+
+<section class="contact">
+<h2 class="section-title">Prendre Rendez-vous</h2>
+
+<p>Téléphone : 06 00 00 00 00</p>
+
+<a href="tel:0600000000" class="btn">
+Appeler maintenant
+</a>
+</section>
+
+<footer>
+© 2025 Chez RA Barber
+</footer>
+
+</body>
+</html>
