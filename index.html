@@ -3,24 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Chez RA Barber</title>
+<title>Chez R&A Barber</title>
 
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
 body{
+margin:0;
+font-family:Arial,sans-serif;
 background:#000;
 color:white;
-font-family:Arial, sans-serif;
 }
 
 header{
 text-align:center;
-padding:40px 20px;
+padding:50px 20px;
 }
 
 h1{
@@ -28,41 +23,81 @@ color:#d4af37;
 font-size:3rem;
 }
 
-.slogan{
-margin-top:10px;
-color:#ccc;
-}
-
-section{
-padding:40px 20px;
-max-width:900px;
+.section{
+max-width:1100px;
 margin:auto;
+padding:40px 20px;
 }
 
 .section-title{
 text-align:center;
 color:#d4af37;
-margin-bottom:25px;
-font-size:2rem;
+margin-bottom:30px;
+}
+
+.hero img,
+.salon img,
+.barbier img{
+width:100%;
+max-width:500px;
+border-radius:15px;
+display:block;
+margin:auto;
+}
+
+.barbier,
+.salon{
+text-align:center;
+}
+
+.slider{
+position:relative;
+max-width:700px;
+margin:auto;
+}
+
+.slider img{
+width:100%;
+border-radius:15px;
 }
 
 .tarifs{
 display:grid;
-gap:15px;
+gap:20px;
 }
 
 .tarif{
 background:#111;
 border:1px solid #d4af37;
-padding:15px;
-border-radius:10px;
-display:flex;
-justify-content:space-between;
+padding:20px;
+border-radius:15px;
 }
 
-.tarif span:last-child{
+.tarif h3{
 color:#d4af37;
-font-weight:bold;
+margin-top:0;
+}
+
+.fidelite{
+background:#111;
+border:1px solid #d4af37;
+border-radius:15px;
+text-align:center;
+padding:30px;
+}
+
+.points{
+display:grid;
+grid-template-columns:repeat(5,1fr);
+gap:10px;
+max-width:350px;
+margin:20px auto;
+}
+
+.point{
+border:2px solid #d4af37;
+padding:15px;
+border-radius:10px;
 }
 
 .contact{
@@ -71,19 +106,19 @@ text-align:center;
 
 .btn{
 display:inline-block;
-margin-top:15px;
+margin:10px;
+padding:15px 25px;
 background:#d4af37;
 color:black;
 text-decoration:none;
-padding:12px 25px;
-border-radius:8px;
+border-radius:10px;
 font-weight:bold;
 }
 
 footer{
 text-align:center;
-padding:20px;
-color:#888;
+padding:30px;
+color:#999;
 }
 </style>
 </head>
@@ -91,68 +126,150 @@ color:#888;
 <body>
 
 <header>
-<h1>Chez RA Barber</h1>
-<p class="slogan">Coupes modernes • Dégradés • Barbe</p>
+<h1>Chez R&A Barber</h1>
+<p>Coupes modernes • Dégradés • Barbe</p>
 </header>
-<section>
+
+<section class="section hero">
+<img src="f35f8c72-2d26-4447-818c-92c993f7d077.jpeg" alt="Salon">
+</section>
+
+<section class="section barbier">
 <h2 class="section-title">Votre Barbier</h2>
-
-<img src="0bd2a375-3f63-454a-bfbe-79e5b14ca89b.jpeg" width="250">
-
+<img src="0bd2a375-3f63-454a-bfbe-79e5b14ca89b.jpeg" alt="Ramzi">
 <p>
-Ramzi, barbier professionnel spécialisé dans les dégradés, les coupes modernes et l'entretien de la barbe.
+Ramzi, barbier professionnel spécialisé dans les dégradés,
+les coupes modernes et l'entretien de la barbe.
 </p>
+</section>
+
+<section class="section salon">
 <h2 class="section-title">Votre Salon</h2>
-<img src="f35f8c72-2d26-4447-818c-92c993f7d077.jpeg" width="300">. 
+<img src="f35f8c72-2d26-4447-818c-92c993f7d077.jpeg" alt="Salon">
+<p>
+Un espace moderne et convivial à Combs-la-Ville,
+ouvert 7j/7 pour vous accueillir dans les meilleures conditions.
+</p>
+</section>
+
+<section class="section">
 <h2 class="section-title">Nos Réalisations</h2>
 
-<img src="1392ce00-ce72-4855-915a-710f2e29e09c.jpeg" width="300">
-<img src="25eefd3b-0616-4298-a215-b03e37708ad9.jpeg" width="300">
-<img src="2db9ee1e-98d9-47b5-83c0-47db14e31d17.jpeg" width="300">
-<img src="dc3a69bf-dcea-46f4-8d72-aec0ffce008a.jpeg" width="300">
-<img src="ddfaf24c-077f-4340-affd-52ae3870c43d.jpeg" width="300">
+<div class="slider">
+<img id="slide" src="1392ce00-ce72-4855-915a-710f2e29e09c.jpeg">
+</div>
 
 </section>
 
-<section>
+<section class="section">
 <h2 class="section-title">Tarifs</h2>
 
 <div class="tarifs">
+
 <div class="tarif">
-<span>Coupe Homme</span>
-<span>15€</span>
+<h3>Coupe Homme Ciseaux — 16€</h3>
+<p>Coupe classique aux ciseaux pour un résultat propre et élégant.</p>
 </div>
 
 <div class="tarif">
-<span>Coupe + Barbe</span>
-<span>20€</span>
+<h3>Dégradé — 16€</h3>
+<p>Dégradé précis et moderne adapté à votre style.</p>
 </div>
 
 <div class="tarif">
-<span>Barbe</span>
-<span>10€</span>
+<h3>Coupe + Barbe — 25€</h3>
+<p>Coupe complète avec entretien et finition de la barbe.</p>
 </div>
 
 <div class="tarif">
-<span>Coupe Enfant</span>
-<span>12€</span>
+<h3>Taille Barbe — dès 10€</h3>
+<p>Contours, entretien et mise en forme professionnelle.</p>
 </div>
+
+<div class="tarif">
+<h3>Coupe Enfant — 13€</h3>
+<p>Coupe adaptée aux plus jeunes dans une ambiance détendue.</p>
+</div>
+
+<div class="tarif">
+<h3>Soin du Visage — 25€</h3>
+<p>Nettoyage et soin pour une peau fraîche et revitalisée.</p>
+</div>
+
+<div class="tarif">
+<h3>Forfait Complet — 30€</h3>
+<p>Coupe + barbe + soin du visage + finition.</p>
+</div>
+
 </div>
 </section>
 
-<section class="contact">
-<h2 class="section-title">Prendre Rendez-vous</h2>
+<section class="section">
+<h2 class="section-title">Carte Fidélité</h2>
 
-<p>Téléphone : 06 00 00 00 00</p>
+<div class="fidelite">
 
-<a href="tel:0600000000" class="btn">
-Appeler maintenant
+<h3>🎁 10ème prestation offerte</h3>
+
+<div class="points">
+<div class="point">1</div>
+<div class="point">2</div>
+<div class="point">3</div>
+<div class="point">4</div>
+<div class="point">5</div>
+<div class="point">6</div>
+<div class="point">7</div>
+<div class="point">8</div>
+<div class="point">9</div>
+<div class="point">🎁</div>
+</div>
+
+<p>Scannez le QR Code pour suivre votre fidélité.</p>
+
+</div>
+</section>
+
+<section class="section contact">
+<h2 class="section-title">Contact</h2>
+
+<p>📞 +33 7 51 18 21 58</p>
+<p>📍 67 Rue Sermonoise, 77380 Combs-la-Ville</p>
+<p>🕒 7j/7 de 9h30 à 20h</p>
+
+<a class="btn" href="tel:+33751182158">Appeler</a>
+
+<a class="btn"
+href="https://instagram.com/chez_ra_barber_77">
+Instagram
 </a>
+
 </section>
 
 <footer>
-© 2025 Chez RA Barber
+Chez R&A Barber © 2025
 </footer>
+
+<script>
+
+const images = [
+"1392ce00-ce72-4855-915a-710f2e29e09c.jpeg",
+"25eefd3b-0616-4298-a215-b03e37708ad9.jpeg",
+"2db9ee1e-98d9-47b5-83c0-47db14e31d17.jpeg",
+"dc3a69bf-dcea-46f4-8d72-aec0ffce008a.jpeg",
+"ddfaf24c-077f-4340-affd-52ae3870c43d.jpeg"
+];
+
+let i = 0;
+
+setInterval(() => {
+i++;
+if(i >= images.length){
+i = 0;
+}
+document.getElementById("slide").src = images[i];
+}, 3000);
+
+</script>
 
 </body>
 </html>
